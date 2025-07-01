@@ -1,131 +1,79 @@
 ---
-
 import "../styles/global.css";
-
 ---
 
+<header>
+  <nav>
+    <div class="logo">
+      <span>U</span><span>R</span><span>B</span><span>A</span><span>N</span>
+      <span>&nbsp;</span>
+      <span>N</span><span>E</span><span>S</span><span>T</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modern Landing Page</title>
-  </head>
-
-  <body>
-    <!-- Header -->
-    <header>
-      <nav>
-        <div class="logo">
-  <span>U</span><span>R</span><span>B</span><span>A</span><span>N</span>
-  <span>&nbsp;</span>
-  <span>N</span><span>E</span><span>S</span><span>T</span>
-</div>
-        <ul class="nav-links">
-          <li><a href="#">Products</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        
-      </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
+<!-- Hero Section -->
+<section class="hero" id="hero">
   <div class="hero-content">
     <h1>Redefine Your Workspace</h1>  
-    <p>
-  Transform the way you work with furniture that balances comfort and style.  
-    
-  
-</p>
- <!-- <p>         Modular designs to adapt with your workflow</p> -->
-    <p> 
-  Transform the way you work with furniture that balances comfort and style.    
-  </p>    
-  <p>Modern aesthetics that inspire productivity.</p> 
-   
-
-<a href="https://www.google.com/search?q=office+table&hl=en-GB&ved=1t:200715&ictx=111&shopcct=1&udm=28" class="cta-btn">
-  Explore Now
-</a>
-   
+    <p>Designs a workspace that works for you, transform the way you work beautifully    </p>
+    <a href="https://www.google.com/search?q=office+table" class="cta-btn">Explore Now</a>
   </div>
-
   <div class="hero-image">
-    <img src="/assets/placeholder1.jpg" alt="Modern Workspace" />
-   
+    <!-- <img src="/assets/placeholder1.jpg" alt="Modern Workspace" /> -->
   </div>
 </section>
 
-
-    <!-- Features Section -->
-    <div class="feature ergonomic-chair">
-  <!-- Left side image -->
-  <img src="/assets/placeholder4.jpg" alt="Office Chair" />
-  
-
-  <!-- Right side text -->
-
-
-  
+<!-- Ergonomic Office Chair Section -->
+<section class="feature ergonomic-chair" id="products">
+  <img src="/Urban-nest-landing-page/assets/placeholder4.jpg" alt="Office Chair" />
   <div class="text-content">
     <h2>Ergonomic Office Chairs</h2>
-    
-    
-    <li> Posture-corrective design to reduce back strain</li>
-    <li> Breathable mesh for all-day airflow</li>
-    <li> Modern look that fits any office setup</li>
-    <li> Eco-friendly and easy to assemble</li>
-    
-    <li> Adjustable lumbar support and armrests</li>
-   
-    
-     <a href="https://www.urbanladder.com/office-chairs" class="cta-btn">Learn More</a> 
+    <!-- <ul class="feature-list"> -->
+      <li>Posture-corrective design to reduce back strain</li>
+      <li>Breathable mesh for all-day airflow</li>
+      <li>Modern look that fits any office setup</li>
+      <li>Eco-friendly and easy to assemble</li>
+      <li>Adjustable lumbar support and armrests</li>
+    <!-- </ul> -->
+    <a href="https://www.urbanladder.com/office-chairs" class="cta-btn">Shop Now</a>
   </div>
-</div>
+</section>
 
-
-
-
-
-
-<section class="minimalist-section">
+<!-- Minimalist Section -->
+<section class="minimalist-section" id="about">
   <div class="overlay-content">
     <h2>Minimalist Workspace Design</h2>
     <p>Create a clutter-free environment with our elegant desks and storage solutions.</p>
     <ul class="feature-list">
-      <li><span>✓</span> Sleek modern desks with ample surface area</li>
-      <li><span>✓</span> Clutter-free designs to boost focus and clarity</li>
-      <li><span>✓</span> Hidden storage compartments for organization</li>
-      <li><span>✓</span> Cable management to maintain neatness</li>
-      <li><span>✓</span> Space-saving and multi-functional furniture</li>
-      <li><span>✓</span> Soothing neutral colors for a calm ambiance</li>
+      <li><span>&#10003;</span> Sleek modern desks with ample surface area</li>
+      <li><span>&#10003;</span> Clutter-free designs to boost focus and clarity</li>
+      <li><span>&#10003;</span> Hidden storage compartments for organization</li>
+      <li><span>&#10003;</span> Cable management to maintain neatness</li>
+      <li><span>&#10003;</span> Space-saving and multi-functional furniture</li>
+      <li><span>&#10003;</span> Soothing neutral colors for a calm ambiance</li>
     </ul>
   </div>
 </section>
 
-    
-
-</section>
-
-  
-  
-
-    <!-- CTA Section -->
-    <section class="cta">
+<!-- Call to Action -->
+<section class="cta">
   <h2>Upgrade Your Office Today</h2>
   <p>From startup desks to executive lounges — we have everything you need to feel inspired.</p>
- <a href="https://www.pepperfry.com/" class="cta-btn">Browse Catalog</a>
+  <a href="https://www.pepperfry.com/" class="cta-btn">Browse Catalog</a>
 </section>
 
-    <!-- Footer -->
-     <!-- Contact Section -->
+<!-- Contact Section -->
 <section class="contact" id="contact">
   <div class="contact-content">
     <h2>Contact Us</h2>
     <p>Have questions or want to get in touch? Fill out the form below and we'll get back to you soon.</p>
-    
     <form class="contact-form" action="#" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
@@ -134,28 +82,30 @@ import "../styles/global.css";
     </form>
   </div>
 </section>
-    <footer>
-      <div class="footer-columns">
-        <div>
-          <h4>Company</h4>
-          <ul>
-            
-            <li><a href="#">Team</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#">Help Center</a></li>
-            
-            <li><a href="#">Privacy</a></li>
-          </ul>
-        </div>
-      </div>
-      <p>&copy; 2025 Modern Landing Page. All rights reserved.</p>
-    </footer>
-    <script>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-columns">
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <p>&copy; 2025 Modern Landing Page. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
   const features = document.querySelectorAll('.feature');
 
   const observer = new IntersectionObserver((entries) => {
@@ -170,84 +120,58 @@ import "../styles/global.css";
     observer.observe(feature);
   });
 
-
-
-  
   window.addEventListener('scroll', () => {
     const hero = document.querySelector('.hero-content');
-    const heroTop = hero.getBoundingClientRect().top;
-    const triggerPoint = window.innerHeight * 0.85;
-
-    if (heroTop < triggerPoint) {
-      hero.classList.add('show');
+    if (hero) {
+      const heroTop = hero.getBoundingClientRect().top;
+      const triggerPoint = window.innerHeight * 0.85;
+      if (heroTop < triggerPoint) {
+        hero.classList.add('show');
+      }
     }
   });
 
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".nav-links a");
+    const productSection = document.querySelector(".ergonomic-chair");
+    const aboutSection = document.querySelector(".minimalist-section");
 
+    if (productSection && !productSection.id) {
+      productSection.id = "products";
+    }
 
+    if (aboutSection && !aboutSection.id) {
+      aboutSection.id = "about";
+    }
 
+    navLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const linkText = link.textContent?.trim().toLowerCase() || "";
+        let targetId = "";
 
+        if (linkText === "home") {
+          targetId = "hero";
+        } else if (linkText === "products") {
+          targetId = "products";
+        } else if (linkText === "about") {
+          targetId = "about";
+        } else if (linkText === "contact") {
+          targetId = "contact";
+        }
 
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const headerOffset = 100;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll(".nav-links a");
-
-  // Dynamically assign IDs if not present
-  const productSection = document.querySelector(".ergonomic-chair");
-  const aboutSection = document.querySelector(".minimalist-section");
-
-  if (productSection && !productSection.id) {
-    productSection.id = "products";
-  }
-
-  if (aboutSection && !aboutSection.id) {
-    aboutSection.id = "about";
-  }
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      const linkText = link.textContent.trim().toLowerCase();
-      let targetId = "";
-
-      if (linkText === "products") {
-        targetId = "products";
-      } else if (linkText === "about") {
-        targetId = "about";
-      } else if (linkText === "contact") {
-        targetId = "contact";
-      }
-
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        const headerOffset = 100; // try 120 if 100 still cuts
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-      }
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      });
     });
   });
-});
-      
-    
 </script>
-
-  </body>
-</html>

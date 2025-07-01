@@ -97,19 +97,20 @@ nav {
 
 .hero-content h1 {
   font-size: 3rem;
-  color: #2874d7;
+  /* color: #480d5e; */
+  
   margin-bottom: 1rem;
   transition: color 0.3s;
 }
 
 .hero-content h1:hover {
-  color: #00e1ff;
+  color: white;
   cursor: pointer;
 }
 
 .hero-content p {
   font-size: 1.1rem;
-  color: #555;
+  /* color: #555; */
   margin-bottom: 1.5rem;
   
 }
@@ -374,7 +375,7 @@ footer p {
 
 .text-content {
   flex: 1;
-  min-width: 300px;
+  min-width: 400px;
 }
 
 .text-content h2 {
@@ -451,7 +452,7 @@ footer p {
 
 .minimalist-section {
   position: relative;
-  background: url('/assets/placeholder3.jpg') no-repeat center center/cover;
+  background: url('/Urban-nest-landing-page/assets/placeholder3.jpg') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -582,7 +583,7 @@ footer p {
 
 .hero {
   position: relative;
-  background-image: url('/assets/placeholder16.jpg');
+  background-image: url('/Urban-nest-landing-page/assets/placeholder16.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -665,39 +666,14 @@ footer p {
 
 
 
-/* Continuous floating animation */
-@keyframes floatEffect {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-.hero-content h1,
-.hero-content p,
-.hero-content .cta-btn {
-  animation: floatEffect 4s ease-in-out infinite;
-  transition: all 0.3s ease;
-}
-
-/* Hover effect for a gentle lift */
-.hero-content h1:hover,
-.hero-content p:hover,
-.hero-content .cta-btn:hover {
-  transform: translateY(-5px) scale(1.02);
-  text-shadow: 0 2px 10px rgba(120, 110, 154, 0);
-}
 
 
 
 
 
 
-/* Floating animation */
-@keyframes floatParagraph {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
+Floating animation
+
 
 .hero-content p {
   animation: floatParagraph 5s ease-in-out infinite;
@@ -837,6 +813,442 @@ nav {
     opacity: 0.6;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0d0d0d;
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.hero-content {
+  flex: 1 1 400px;
+  max-width: 1000px;
+}
+
+.hero-content h1 {
+  color: #00aaff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  color: white;
+  margin: 0.5rem 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero-images {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero-images img {
+  width: 90%;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+.hero-image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 2rem;
+  flex: 1 1 400px;
+}
+
+.img1 {
+  grid-column: 1;
+  grid-row: 1;
+  width: 200%;
+  max-width: 280px;
+  border-radius: 12px;
+  animation: float1 5s ease-in-out infinite;
+}
+
+.img2 {
+  grid-column: 3;
+  grid-row: 1;
+  width: 100%;
+  max-width: 180px;
+  border-radius: 12px;
+  animation: float2 5s ease-in-out infinite;
+}
+
+.img3 {
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  max-width: 180px;
+  border-radius: 12px;
+  animation: float3 5s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Common image style */
+.hero-image img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Glowing border on hover */
+.hero-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #d2e3e3;
+}
+
+/* Triangle layout */
+.img1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.img2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.img3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* Overlay text using ::after (no HTML changes) */
+.img1::after,
+.img2::after,
+.img3::after {
+  content: "Urban Nest Product";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+/* Show text on hover */
+.img1:hover::after,
+.img2:hover::after,
+.img3:hover::after {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+.hero-image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
+/* Make images bigger + glow + float */
+.hero-image img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+/* Triangle position */
+.img1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.img2 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.img3 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+/* 🔥 Show white text on hover using ::after */
+.img1::after,
+.img2::after,
+.img3::after {
+  content: "Urban Nest Product";
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* 👆 Show text only on hover */
+.img1:hover::after,
+.img2:hover::after,
+.img3:hover::after {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.hero-image img{
+  width: 500%;
+  /* height: 100%; */
+}
+
+
+
+.hero-image .img3{
+  margin-top: 1rem;
+  /* margin-right:20rem; */
+
+  width: 700%;
+
+}
+
+
+.hero-image img3 {
+  width: 500%;
+}
+
+
+
+
+
+.hero-content{
+  max-width: 1000px;
+  padding: 6rem;
+}
+
+
+
+
+
+.hero-content h1{
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-left: 17rem;
+  color:#00bfff;
+  font-size: 2.5rem;
+  white-space: nowrap;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 2rem;
+  
+}
+
+
+.hero-content .cta-btn {
+  text-align: center;
+  margin-left: 27rem;
+  white-space: nowrap;
+  margin-top: 1rem;
+  
+}
+
+.cta {
+  background-color: #26346c;
+}
+
+.cta-btn{
+  color: white;
+  background-color: #1d75e5;
+}
+
+
+.hero-content {
+  width: 900px;
+  margin-bottom: 1rem;
+  min-height: 80vh;
+}
+
+.hero-content p{
+  margin-left: 3rem;
+  white-space: Nowrap;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 0;
+  color: rgb(230, 224, 224);
+}
+
+.html {
+  scroll-behavior: smooth;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Example: Adjust hero text and layout on small screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  nav .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.feature.ergonomic-chair{
+  min-height: 90vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
 
 
 

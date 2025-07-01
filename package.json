@@ -2,7 +2,6 @@
   "name": "afraid-ablation",
   "type": "module",
   "version": "0.0.1",
- 
   "dependencies": {
     "@tailwindcss/vite": "^4.1.10",
     "astro": "^5.10.0"
@@ -12,10 +11,9 @@
     "tailwindcss": "^4.1.10"
   },
   "scripts": {
-  "dev": "astro dev",
-  "build": "astro build",
-  "preview": "astro preview",
-  "deploy": "astro build && gh-pages -d dist"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "astro build && gh-pages -d dist"
+  }
 }
-}
-
