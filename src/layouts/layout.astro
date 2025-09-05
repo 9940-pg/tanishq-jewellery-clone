@@ -1,7 +1,6 @@
 ---
-const { title = "Tanishq Jewellery", description = "Beautiful jewellery collections" } = Astro.props;
+const { title, description } = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,9 +8,22 @@ const { title = "Tanishq Jewellery", description = "Beautiful jewellery collecti
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="stylesheet" href="/styles/global.css" />
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="/styles/tanishq.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   </head>
+
   <body>
-    <slot />  <!-- yaha tumhara page ka content inject hoga -->
+    <!-- Slot for injecting page content -->
+    <slot />
+
+    <!-- Optional: Global JS if needed -->
+    <!-- <script type="module" src="/src/scripts/global.js"></script> -->
   </body>
 </html>
+
