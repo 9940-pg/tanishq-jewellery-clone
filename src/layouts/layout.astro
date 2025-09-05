@@ -1,7 +1,7 @@
 ---
 const { title, description } = Astro.props;
 ---
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,21 +9,16 @@ const { title, description } = Astro.props;
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <!-- Global CSS -->
+    <!-- Your main CSS -->
     <link rel="stylesheet" href="/styles/tanishq.css" />
 
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
-
   <body>
-    <!-- Slot for injecting page content -->
     <slot />
-
-    <!-- Optional: Global JS if needed -->
-    <!-- <script type="module" src="/src/scripts/global.js"></script> -->
   </body>
 </html>
-
