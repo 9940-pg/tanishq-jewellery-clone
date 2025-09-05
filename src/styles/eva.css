@@ -1,0 +1,115 @@
+/* ===== Background Image ===== */
+#eva-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;              /* fills screen like wallpaper */
+  background-color: #000;         /* fallback if image fails */
+  z-index: -1;
+  pointer-events: none;
+  filter: brightness(0.95);
+  opacity: 0;
+  transition: opacity 800ms ease; /* smooth fade */
+}
+
+
+
+
+#startOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+
+#eva-bg.loaded {
+  opacity: 1;
+}
+
+/* ===== Chat UI ===== */
+.eva-content {
+  position: relative;
+  z-index: 10;
+  padding: 40px 20px;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.eva-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+#chatLog-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#chatLog {
+  max-height: 400px;
+  width: 80%;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+
+/* ===== Chat Messages ===== */
+#chatLog p {
+  margin: 10px 0;
+  line-height: 1.5;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+#chatLog p.user {
+  background: rgba(0, 120, 255, 0.7);
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+#chatLog p.bot {
+  background: rgba(255, 255, 255, 0.15);
+  margin-right: auto;
+}
+
+/* ===== Scrollbar Styling ===== */
+#chatLog::-webkit-scrollbar {
+  width: 8px;
+}
+
+#chatLog::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+#chatLog::-webkit-scrollbar-thumb {
+  background: rgba(0, 120, 255, 0.7);
+  border-radius: 8px;
+}
+
+#chatLog::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 120, 255, 0.9);
+}

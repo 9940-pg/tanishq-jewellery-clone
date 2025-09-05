@@ -1,0 +1,29 @@
+---
+import "../styles/eva.css";
+---
+
+<head>
+  <title>Evaruko.ai</title>
+  <link rel="icon" type="image/jpg" sizes="32x32" href="/assets/eva/favicon-icon.jpg" />
+</head>
+
+<!-- Background -->
+<img id="eva-bg" src="/assets/eva/eva-bg.jpg" alt="Evaruko Background" />
+
+<!-- Main Content -->
+<main class="eva-content">
+  <h1>Evaruko.ai</h1>
+  <div id="chatLog-container">
+    <div id="chatLog" class="chat-log"></div>
+  </div>
+</main>
+
+<!-- Eva Start Overlay -->
+<div id="startOverlay">
+  Click to Start Eva
+</div>
+
+<!-- Logic -->
+<script type="module" src="/src/scripts/eva-logic.js"></script>
+
+

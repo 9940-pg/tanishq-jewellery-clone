@@ -1,177 +1,101 @@
 ---
-import "../styles/global.css";
+import "../styles/styles.css";
 ---
 
-<header>
-  <nav>
-    <div class="logo">
-      <span>U</span><span>R</span><span>B</span><span>A</span><span>N</span>
-      <span>&nbsp;</span>
-      <span>N</span><span>E</span><span>S</span><span>T</span>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tanishq Jewellery</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tanishq Jewellery</h1>
+      <nav>
+        <ul>
+          <li><a href="#rings">Rings</a></li>
+          <li><a href="#necklaces">Necklaces</a></li>
+          <li><a href="#earrings">Earrings</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="rings" class="product-section">
+        <h2>Rings</h2>
+        <div class="products">
+          <div class="product-card">
+            <img src="/images/ring1.jpg" alt="Gold Ring" />
+            <h3>Elegant Gold Ring</h3>
+            <p>Price: ₹15,000</p>
+            <button class="buy-btn" data-product="Elegant Gold Ring">Buy Now</button>
+          </div>
+          <div class="product-card">
+            <img src="/images/ring2.jpg" alt="Diamond Ring" />
+            <h3>Diamond Studded Ring</h3>
+            <p>Price: ₹45,000</p>
+            <button class="buy-btn" data-product="Diamond Studded Ring">Buy Now</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="necklaces" class="product-section">
+        <h2>Necklaces</h2>
+        <div class="products">
+          <div class="product-card">
+            <img src="/images/necklace1.jpg" alt="Gold Necklace" />
+            <h3>Classic Gold Necklace</h3>
+            <p>Price: ₹30,000</p>
+            <button class="buy-btn" data-product="Classic Gold Necklace">Buy Now</button>
+          </div>
+          <div class="product-card">
+            <img src="/images/necklace2.jpg" alt="Pearl Necklace" />
+            <h3>Pearl Necklace</h3>
+            <p>Price: ₹25,000</p>
+            <button class="buy-btn" data-product="Pearl Necklace">Buy Now</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="earrings" class="product-section">
+        <h2>Earrings</h2>
+        <div class="products">
+          <div class="product-card">
+            <img src="/images/earring1.jpg" alt="Gold Earrings" />
+            <h3>Gold Hoop Earrings</h3>
+            <p>Price: ₹12,000</p>
+            <button class="buy-btn" data-product="Gold Hoop Earrings">Buy Now</button>
+          </div>
+          <div class="product-card">
+            <img src="/images/earring2.jpg" alt="Diamond Earrings" />
+            <h3>Diamond Stud Earrings</h3>
+            <p>Price: ₹40,000</p>
+            <button class="buy-btn" data-product="Diamond Stud Earrings">Buy Now</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2>Purchase Product</h2>
+        <p id="product-name"></p>
+        <form id="purchase-form">
+          <label>
+            Name:
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email:
+            <input type="email" name="email" required />
+          </label>
+          <button type="submit">Confirm Purchase</button>
+        </form>
+      </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
 
-<!-- Hero Section -->
-<section class="hero" id="hero">
-  <div class="hero-content">
-    <h1>Redefine Your Workspace</h1>  
-    <p>Designs a workspace that works for you, transform the way you work beautifully    </p>
-    <a href="https://www.google.com/search?q=office+table" class="cta-btn">Explore Now</a>
-  </div>
-  <div class="hero-image">
-    <!-- <img src="/assets/placeholder1.jpg" alt="Modern Workspace" /> -->
-  </div>
-</section>
-
-<!-- Ergonomic Office Chair Section -->
-<section class="feature ergonomic-chair" id="products">
-  <img src="/Urban-nest-landing-page/assets/placeholder4.jpg" alt="Office Chair" />
-  <div class="text-content">
-    <h2>Ergonomic Office Chairs</h2>
-    <!-- <ul class="feature-list"> -->
-      <li>Posture-corrective design to reduce back strain</li>
-      <li>Breathable mesh for all-day airflow</li>
-      <li>Modern look that fits any office setup</li>
-      <li>Eco-friendly and easy to assemble</li>
-      <li>Adjustable lumbar support and armrests</li>
-    <!-- </ul> -->
-    <a href="https://www.urbanladder.com/office-chairs" class="cta-btn">Shop Now</a>
-  </div>
-</section>
-
-<!-- Minimalist Section -->
-<section class="minimalist-section" id="about">
-  <div class="overlay-content">
-    <h2>Minimalist Workspace Design</h2>
-    <p>Create a clutter-free environment with our elegant desks and storage solutions.</p>
-    <ul class="feature-list">
-      <li><span>&#10003;</span> Sleek modern desks with ample surface area</li>
-      <li><span>&#10003;</span> Clutter-free designs to boost focus and clarity</li>
-      <li><span>&#10003;</span> Hidden storage compartments for organization</li>
-      <li><span>&#10003;</span> Cable management to maintain neatness</li>
-      <li><span>&#10003;</span> Space-saving and multi-functional furniture</li>
-      <li><span>&#10003;</span> Soothing neutral colors for a calm ambiance</li>
-    </ul>
-  </div>
-</section>
-
-<!-- Call to Action -->
-<section class="cta">
-  <h2>Upgrade Your Office Today</h2>
-  <p>From startup desks to executive lounges — we have everything you need to feel inspired.</p>
-  <a href="https://www.pepperfry.com/" class="cta-btn">Browse Catalog</a>
-</section>
-
-<!-- Contact Section -->
-<section class="contact" id="contact">
-  <div class="contact-content">
-    <h2>Contact Us</h2>
-    <p>Have questions or want to get in touch? Fill out the form below and we'll get back to you soon.</p>
-    <form class="contact-form" action="#" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="footer-columns">
-    <div>
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Support</h4>
-      <ul>
-        <li><a href="#">Help Center</a></li>
-        <li><a href="#">Privacy</a></li>
-      </ul>
-    </div>
-  </div>
-  <p>&copy; 2025 Modern Landing Page. All rights reserved.</p>
-</footer>
-
-<!-- JavaScript -->
-<script>
-  const features = document.querySelectorAll('.feature');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in');
-      }
-    });
-  });
-
-  features.forEach((feature) => {
-    observer.observe(feature);
-  });
-
-  window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero-content');
-    if (hero) {
-      const heroTop = hero.getBoundingClientRect().top;
-      const triggerPoint = window.innerHeight * 0.85;
-      if (heroTop < triggerPoint) {
-        hero.classList.add('show');
-      }
-    }
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.querySelectorAll(".nav-links a");
-    const productSection = document.querySelector(".ergonomic-chair");
-    const aboutSection = document.querySelector(".minimalist-section");
-
-    if (productSection && !productSection.id) {
-      productSection.id = "products";
-    }
-
-    if (aboutSection && !aboutSection.id) {
-      aboutSection.id = "about";
-    }
-
-    navLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const linkText = link.textContent?.trim().toLowerCase() || "";
-        let targetId = "";
-
-        if (linkText === "home") {
-          targetId = "hero";
-        } else if (linkText === "products") {
-          targetId = "products";
-        } else if (linkText === "about") {
-          targetId = "about";
-        } else if (linkText === "contact") {
-          targetId = "contact";
-        }
-
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-          const headerOffset = 100;
-          const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-          });
-        }
-      });
-    });
-  });
-</script>
+    <script type="module" src="/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+---
+const jewelryItems = [
+  {
+    id: 1,
+    title: "Elegant Gold Ring",
+    description: "A beautiful gold ring with intricate design.",
+    image: "/images/gold-ring.jpg",
+  },
+  {
+    id: 2,
+    title: "Diamond Necklace",
+    description: "Sparkling diamond necklace for special occasions.",
+    image: "/images/diamond-necklace.jpg",
+  },
+  {
+    id: 3,
+    title: "Pearl Earrings",
+    description: "Classic pearl earrings to complement any outfit.",
+    image: "/images/pearl-earrings.jpg",
+  },
+  {
+    id: 4,
+    title: "Silver Bracelet",
+    description: "Stylish silver bracelet with modern design.",
+    image: "/images/silver-bracelet.jpg",
+  },
+];
+---
+
+<div class="gallery">
+  {jewelryItems.map(item => (
+    <div class="card" tabindex="0" aria-label={item.title}>
+      <img src={item.image} alt={item.title} loading="lazy" />
+      <div class="card-info">
+        <h3>{item.title}</h3>
+        <p>{item.description}</p>
+        <a href="#" class="btn" aria-label={`Buy ${item.title}`}>Buy Now</a>
+      </div>
+    </div>
+  ))}
+</div>
