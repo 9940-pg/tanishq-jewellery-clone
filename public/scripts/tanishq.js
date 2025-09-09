@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const cardsPerPage = 3;
 
   function updateTestimonials() {
-    const cardWidth = testimonialCards[0].offsetWidth + 20; // width + margin
-    testimonialTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
+  const cardWidth = testimonialCards[0].offsetWidth + 20; // width + margin
+  testimonialTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
 
   // Next button
   if (nextBtn) {
@@ -58,3 +58,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+const cards = document.querySelectorAll('.service-card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+// Observe all cards
+cards.forEach((card, index) => {
+  card.style.transitionDelay = `${index * 0.2}s`;
+  observer.observe(card);
+});
+
+// ✅ Extra check: agar page reload par hi section viewport me hai
+window.addEventListener("load", () => {
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      card.classList.add("in-view");
+    }
+  });
+});
